@@ -94,7 +94,7 @@ public class ServerLoadBalancerTest {
 		balancing(aServersListWith(server1, server2), aVmsListWith(vm1, vm2, vm3));
 		assertThat("server 1 should contain the vm1", server1.contains(vm1));
 		assertThat("server 2 should contain the vm2", server2.contains(vm2));
-		assertThat("server 1 should contain the vm3", server2.contains(vm3));
+		assertThat("server 1 should contain the vm3", server1.contains(vm3));
 		
 		assertThat(server1, hasCurrentLoadOf(75.0d));
 		assertThat(server2, hasCurrentLoadOf(66.66d));
