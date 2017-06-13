@@ -58,6 +58,10 @@ public class ServerLoadBalancerTest {
 
 	}
 	
+	private Matcher<? super Server> hasVmsCountOf(int expectedCount) {
+		return new ServerVmsCountMatcher(expectedCount);
+	}
+
 	private <T> T a(Builder<T> builder) {
 		return builder.build();
 	}
