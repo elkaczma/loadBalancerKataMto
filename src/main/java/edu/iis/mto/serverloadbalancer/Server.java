@@ -17,8 +17,8 @@ public class Server {
 		this.capacity = capacity;
 	}
 
-	public boolean contains(Vm theVm) {
-		return true;
+	public boolean contains(Vm vm) {
+		return vms.contains(vm);
 	}
 
 	public void addVm(Vm vm) {
